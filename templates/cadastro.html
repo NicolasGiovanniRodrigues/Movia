@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Movia</title>
+    <link rel="stylesheet" href="/static/css/cadastro.css">
+</head>
+<body>
+    <main class="pagina">
+        <section class="marca">
+            <div class="logo">
+                <img src="/static/img/logo-clara.png" alt="">
+                <strong>Movia</strong>
+            </div>
+
+            <div class="texto-marca">
+                <h1>Menos espera.<br>Mais movimento.</h1>
+                <p>Aulas, vagas e inscrições em um só lugar. Organize seu treino com clareza, do início ao fim.</p>
+                <p>Começa com uma aula.</p>
+                <small>Funcional · Pilates · Yoga · Spinning</small>
+            </div>
+
+            <footer>Movia · Gestão de aulas para academias</footer>
+        </section>
+
+        <section class="cadastro">
+            <div class="logo logo-verde">
+                <img src="/static/img/logo-escura.png" alt="">
+                <strong>Movia</strong>
+            </div>
+
+            <a class="voltar" href="/login">← Voltar ao login</a>
+
+            <h2>Comece sua rotina.</h2>
+            <p class="descricao">Crie sua conta de aluno para se inscrever nas aulas.</p>
+
+            {% with mensagens = get_flashed_messages(with_categories=true) %}
+                {% for categoria, mensagem in mensagens %}
+                    <div class="mensagem {{ categoria }}">{{ mensagem }}</div>
+                {% endfor %}
+            {% endwith %}
+
+            <form action="/cadastro" method="post">
+                <label for="nome">Nome completo</label>
+                <input id="nome" name="nome" type="text" maxlength="100" required>
+
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="text" maxlength="150" required>
+
+                <label for="telefone">Telefone</label>
+                <input id="telefone" name="telefone" type="text" maxlength="11" required>
+
+                <label for="senha">Senha</label>
+                <input id="senha" name="senha" type="password" maxlength="50" required>
+
+                <label for="confirmar_senha">Confirmar senha</label>
+                <input id="confirmar_senha" name="confirmar_senha" type="password" maxlength="50" required>
+
+                <div class="botoes">
+                    <button type="submit">Criar conta</button>
+                    <a href="/login">Voltar ao login</a>
+                </div>
+            </form>
+
+            <p class="aviso">Seus dados são usados apenas para gerenciar seu acesso e suas aulas.</p>
+        </section>
+    </main>
+</body>
+</html>

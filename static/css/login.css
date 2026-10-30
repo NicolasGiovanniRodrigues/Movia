@@ -1,0 +1,281 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7f5;
+    color: #16251e;
+}
+
+a {
+    color: #16251e;
+}
+
+.pagina-login {
+    font-size: 0;
+}
+
+
+/* APRESENTAÇÃO DO LADO ESQUERDO */
+
+.apresentacao {
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+    min-height: 100vh;
+    background-color: #112c20;
+    color: white;
+    padding-top: 61px;
+    padding-bottom: 61px;
+    padding-left: 56px;
+    padding-right: 56px;
+    font-size: 17px;
+}
+
+.logo-clara {
+    display: inline-block;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo-clara img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.logo-clara span {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.apresentacao h1 {
+    margin-top: 59px;
+    font-size: 44px;
+    line-height: 53px;
+}
+
+.apresentacao p {
+    color: #bdcec4;
+    line-height: 27px;
+}
+
+.descricao {
+    margin-top: 25px;
+}
+
+.chamada {
+    margin-top: 54px;
+}
+
+.modalidades {
+    margin-top: 27px;
+}
+
+.assinatura {
+    margin-top: 27px;
+}
+
+
+/* LOGIN DO LADO DIREITO */
+
+.conteudo {
+    display: inline-block;
+    vertical-align: top;
+    width: 65%;
+    padding-top: 67px;
+    padding-bottom: 40px;
+    padding-left: 64px;
+    padding-right: 64px;
+    font-size: 15px;
+}
+
+.logo-escura {
+    display: block;
+    width: 180px;
+    color: #16251e;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo-escura img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.logo-escura span {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+h2 {
+    margin-top: 27px;
+    font-size: 34px;
+    line-height: 41px;
+}
+
+.subtitulo {
+    color: #5b6961;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+
+/* FORMULÁRIO */
+
+form {
+    margin-top: 25px;
+}
+
+.campo {
+    background-color: white;
+    border: 1px solid #dce3de;
+    border-radius: 8px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.campo label {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.campo input {
+    display: block;
+    width: 100%;
+    height: 24px;
+    margin-top: 2px;
+    border: 0;
+    background-color: white;
+    color: #16251e;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.campo-senha {
+    margin-top: 24px;
+}
+
+button {
+    margin-top: 32px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #176d42;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* TEXTOS ABAIXO DO FORMULÁRIO */
+
+.cadastro {
+    margin-top: 26px;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.privacidade {
+    margin-top: 24px;
+    color: #5b6961;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+
+/* MENSAGENS */
+
+.mensagem {
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid #dce3de;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
+/* TELAS MENORES */
+
+@media (max-width: 1100px) {
+    .apresentacao {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .apresentacao h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .conteudo {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+    .apresentacao {
+        display: none;
+    }
+
+    .conteudo {
+        display: block;
+        width: 100%;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+   .logo-escura {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h2 {
+        margin-top: 32px;
+    }
+
+    .subtitulo {
+        margin-top: 6px;
+        line-height: 23px;
+    }
+
+    .campo input {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 24px;
+    }
+}

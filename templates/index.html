@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+<body class="pagina-inicial">
+
+<div class="cabecalho">
+    <a class="logo-movia" href="{{ url_for('index') }}">
+        <img src="{{ url_for('static', filename='img/logo-escura.png') }}" alt="">
+        <span>Movia</span>
+    </a>
+
+    <div class="menu">
+        <a class="link-ativo" href="{{ url_for('index') }}">Início</a>
+        <a href="#modalidades">Modalidades</a>
+        <a href="#sobre">Sobre</a>
+    </div>
+
+    <div class="botoes-cabecalho">
+        <a class="botao-entrar" href="{{ url_for('login') }}">Entrar</a>
+        <a class="botao-cadastrar" href="{{ url_for('cadastrar_aluno') }}">Cadastrar-se</a>
+    </div>
+</div>
+
+<div class="destaque">
+    <div class="texto-destaque">
+        <p class="frase-verde">SUA ROTINA EM MOVIMENTO</p>
+        <h1>Encontre sua<br>próxima aula.</h1>
+        <p class="descricao-destaque">
+            Modalidades, horários e inscrições<br>
+            da academia em um só lugar.
+        </p>
+        <a class="botao-modalidades" href="#modalidades">
+            Ver modalidades <span>→</span>
+        </a>
+    </div>
+
+    <div class="foto-destaque">
+        <img
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85"
+                alt="Pessoa treinando em uma academia">
+    </div>
+</div>
+
+<div class="secao-modalidades" id="modalidades">
+    <h2>Movimento para cada objetivo</h2>
+
+    <div class="cartao">
+        <img
+                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=700&q=85"
+                alt="Pessoa praticando yoga">
+        <div class="texto-cartao">
+            <h3>Yoga</h3>
+            <p>Mais equilíbrio para o seu dia a dia.</p>
+        </div>
+    </div>
+
+    <div class="cartao">
+        <img
+                src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=700&q=85"
+                alt="Pessoa praticando musculação">
+        <div class="texto-cartao">
+            <h3>Musculação</h3>
+            <p>Força e evolução em todas as fases.</p>
+        </div>
+    </div>
+
+    <div class="cartao">
+        <img
+                src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=85"
+                alt="Pessoa fazendo treino funcional">
+        <div class="texto-cartao">
+            <h3>Treino funcional</h3>
+            <p>Mais disposição para os seus desafios.</p>
+        </div>
+    </div>
+</div>
+
+<div class="faixa-final" id="sobre">
+    <h2>Sua próxima aula <span>começa aqui.</span></h2>
+    <a class="botao-modalidades" href="#modalidades">
+        Ver modalidades <span>→</span>
+    </a>
+</div>
+
+</body>
+</html>

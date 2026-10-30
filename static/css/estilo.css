@@ -1,0 +1,304 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+
+.pagina-inicial {
+    background-color: #F8F9F6;
+    color: #10271D;
+    font-family: Arial, sans-serif;
+}
+
+.cabecalho {
+    background-color: white;
+    height: 76px;
+    padding: 0 7.8%;
+}
+
+.logo-movia {
+    display: inline-block;
+    width: 25%;
+    vertical-align: middle;
+    padding-top: 17px;
+    color: #10271D;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.logo-movia img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    vertical-align: middle;
+}
+
+.logo-movia span {
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.menu {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.menu a {
+    display: inline-block;
+    color: #353B38;
+    margin: 0 20px;
+    padding: 28px 0 10px 0;
+}
+
+.menu .link-ativo {
+    color: #10271D;
+    border-bottom: 3px solid #176D42;
+}
+
+.botoes-cabecalho {
+    display: inline-block;
+    width: 34%;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.botao-entrar,
+.botao-cadastrar {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 12px;
+    color: #10271D;
+}
+
+.botao-entrar {
+    border: 1px solid #10271D;
+    margin-right: 12px;
+}
+
+.botao-cadastrar {
+    background-color: #C8F56A;
+}
+
+.destaque {
+    background-color: #F8F9F6;
+    padding: 0 2% 8px 7.8%;
+}
+
+.texto-destaque {
+    display: inline-block;
+    width: 38%;
+    vertical-align: middle;
+}
+
+.frase-verde {
+    color: #A4D92D;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.texto-destaque h1 {
+    color: #10271D;
+    font-size: 54px;
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.descricao-destaque {
+    color: #656970;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.botao-modalidades {
+    display: inline-block;
+    background-color: #C8F56A;
+    color: #10271D;
+    padding: 18px 34px;
+    border-radius: 12px;
+    margin-top: 26px;
+}
+
+.botao-modalidades span {
+    margin-left: 14px;
+    font-size: 20px;
+}
+
+.foto-destaque {
+    display: inline-block;
+    width: 59%;
+    vertical-align: middle;
+}
+
+.foto-destaque img {
+    width: 100%;
+    height: 442px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.secao-modalidades {
+    background-color: #FCFBF8;
+    padding: 32px 7.8% 24px 7.8%;
+}
+
+.secao-modalidades h2 {
+    color: #10271D;
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.cartao {
+    display: inline-block;
+    width: 32%;
+    margin-right: 1%;
+    background-color: #FCFBF8;
+    border: 1px solid #E2E4DF;
+    border-radius: 13px;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.cartao img {
+    width: 100%;
+    height: 193px;
+    object-fit: cover;
+}
+
+.texto-cartao {
+    padding: 12px 20px 16px 20px;
+}
+
+.texto-cartao h3 {
+    color: #111A15;
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.texto-cartao p {
+    color: #656970;
+    font-size: 15px;
+}
+
+.faixa-final {
+    background-color: #0C3021;
+    padding: 28px 7.8%;
+}
+
+.faixa-final h2 {
+    display: inline-block;
+    width: 77%;
+    color: white;
+    font-size: 39px;
+    vertical-align: middle;
+}
+
+.faixa-final h2 span {
+    color: #C8F56A;
+}
+
+.faixa-final .botao-modalidades {
+    margin-top: 0;
+    padding: 14px 25px;
+}
+
+@media screen and (max-width: 800px) {
+    .cabecalho {
+        height: auto;
+        padding: 16px 5%;
+    }
+
+    .logo-movia {
+        width: 40%;
+        padding-top: 0;
+    }
+
+    .logo-movia img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .logo-movia {
+        font-size: 27px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .botoes-cabecalho {
+        width: 59%;
+    }
+
+    .botao-entrar,
+    .botao-cadastrar {
+        padding: 10px 13px;
+        font-size: 14px;
+    }
+
+    .destaque {
+        padding: 32px 5%;
+    }
+
+    .texto-destaque {
+        width: 100%;
+    }
+
+    .texto-destaque h1 {
+        font-size: 42px;
+    }
+
+    .descricao-destaque {
+        font-size: 17px;
+    }
+
+    .descricao-destaque br {
+        display: none;
+    }
+
+    .foto-destaque {
+        width: 100%;
+        margin-top: 28px;
+    }
+
+    .foto-destaque img {
+        height: 250px;
+    }
+
+    .secao-modalidades {
+        padding: 30px 5%;
+    }
+
+    .secao-modalidades h2 {
+        font-size: 27px;
+    }
+
+    .cartao {
+        width: 100%;
+        margin: 0 0 18px 0;
+    }
+
+    .cartao img {
+        height: 210px;
+    }
+
+    .faixa-final {
+        padding: 28px 5%;
+        text-align: center;
+    }
+
+    .faixa-final h2 {
+        width: 100%;
+        font-size: 29px;
+    }
+
+    .faixa-final .botao-modalidades {
+        margin-top: 18px;
+    }
+}
