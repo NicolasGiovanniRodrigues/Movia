@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início | Movia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
+</head>
+<body>
+    <main class="inicio">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo-escura.png') }}" alt="">
+            <span>Movia</span>
+        </div>
+
+        <h1>Olá, {{ usuario }}</h1>
+        <p>Que bom ter você por aqui.</p>
+
+        <a class="botao-verde" href="{{ url_for('perfil') }}">Meu perfil</a>
+        <a class="sair" href="{{ url_for('logout') }}">Sair</a>
+    </main>
+</body>
+</html>

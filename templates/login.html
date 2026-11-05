@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,49 +7,81 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 </head>
 <body>
-<div class="pagina-login">
+    <div class="pagina-login">
 
-    <aside class="apresentacao">
-        <div class="logo-clara">
-            <img src="{{ url_for('static', filename='img/logo-clara.png') }}" alt="">
-            <span>Movia</span>
-        </div>
-        <h1>Menos espera.<br>Mais movimento.</h1>
-        <p class="descricao">Aulas, vagas e inscrições em um só lugar.<br class="quebra-desktop"> Organize seu treino
-            com clareza, do início ao fim.</p>
-        <p class="chamada">Começa com uma aula.</p>
-        <p class="modalidades">Funcional • Pilates • Yoga • Spinning</p>
-        <p class="assinatura">Movia • Gestão de aulas para academias</p>
-    </aside>
+        <aside class="apresentacao">
+            <div class="logo-clara">
+                <img src="{{ url_for('static', filename='img/logo-clara.png') }}" alt="">
+                <span>Movia</span>
+            </div>
 
-    <!-- FORMULÁRIO DE LOGIN -->
-    <main class="conteudo">
-        <div class="logo-escura">
-            <img src="{{ url_for('static', filename='img/logo-escura.png') }}" alt="">
-            <span>Movia</span>
-        </div>
-        <h2>Bom ter você por aqui.</h2>
-        <p class="subtitulo">Entre para acompanhar sua rotina na academia.</p>
-        {% if mensagem %}
-        <p class="mensagem" role="status">{{ mensagem }}</p>
-        {% endif %}
-        <form method="post" action="{{ url_for('login') }}">
-            <div class="campo">
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" placeholder="ana.souza@email.com" value="{{ email }}"
-                       autocomplete="username" required>
+            <h1>Menos espera.<br>Mais movimento.</h1>
+
+            <p class="descricao">
+                Aulas, vagas e inscrições em um só lugar.
+                <br class="quebra-desktop">
+                Organize seu treino com clareza, do início ao fim.
+            </p>
+
+            <p class="chamada">Começa com uma aula.</p>
+            <p class="modalidades">Funcional • Pilates • Yoga • Spinning</p>
+            <p class="assinatura">Movia • Gestão de aulas para academias</p>
+        </aside>
+
+        <main class="conteudo">
+            <div class="logo-escura">
+                <img src="{{ url_for('static', filename='img/logo-escura.png') }}" alt="">
+                <span>Movia</span>
             </div>
-            <div class="campo campo-senha">
-                <label for="senha">Senha</label>
-                <input id="senha" name="senha" type="password" placeholder="••••••••••" autocomplete="current-password"
-                       required>
-            </div>
-            <button type="submit">Entrar</button>
-        </form>
-        <p class="cadastro">Ainda não tem uma conta? <a href="{{ url_for('cadastrar_aluno') }}">Criar conta de aluno
-            →</a></p>
-        <p class="privacidade">Seus dados são usados apenas para gerenciar seu acesso e suas aulas.</p>
-    </main>
-</div>
+
+            <h2>Bom ter você por aqui.</h2>
+            <p class="subtitulo">Entre para acompanhar sua rotina na academia.</p>
+
+            {% with mensagens = get_flashed_messages(with_categories=true) %}
+                {% for categoria, mensagem in mensagens %}
+                    <p class="{{ categoria }}" role="status">{{ mensagem }}</p>
+                {% endfor %}
+            {% endwith %}
+
+            <form method="post" action="{{ url_for('login') }}">
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="ana.souza@email.com"
+                        value="{{ email }}"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="campo campo-senha">
+                    <label for="senha">Senha</label>
+                    <input
+                        id="senha"
+                        name="senha"
+                        type="password"
+                        placeholder="••••••••••"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <button type="submit">Entrar</button>
+            </form>
+
+            <p class="cadastro">
+                Ainda não tem uma conta?
+                <a href="{{ url_for('cadastrar_aluno') }}">Criar conta de aluno →</a>
+            </p>
+
+            <p class="privacidade">
+                Seus dados são usados apenas para gerenciar seu acesso e suas aulas.
+            </p>
+        </main>
+
+    </div>
 </body>
 </html>

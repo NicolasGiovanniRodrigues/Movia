@@ -31,10 +31,7 @@ a {
     min-height: 100vh;
     background-color: #112c20;
     color: white;
-    padding-top: 61px;
-    padding-bottom: 61px;
-    padding-left: 56px;
-    padding-right: 56px;
+    padding: 61px 56px;
     font-size: 17px;
 }
 
@@ -91,10 +88,7 @@ a {
     display: inline-block;
     vertical-align: top;
     width: 65%;
-    padding-top: 67px;
-    padding-bottom: 40px;
-    padding-left: 64px;
-    padding-right: 64px;
+    padding: 67px 64px 40px;
     font-size: 15px;
 }
 
@@ -131,6 +125,21 @@ h2 {
 }
 
 
+/* MENSAGENS */
+
+.erro {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px 14px;
+    border: 1px solid #e5a5a5;
+    border-radius: 8px;
+    background-color: #fff1f1;
+    color: #9b2525;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+
 /* FORMULÁRIO */
 
 form {
@@ -141,10 +150,7 @@ form {
     background-color: white;
     border: 1px solid #dce3de;
     border-radius: 8px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 13px;
-    padding-right: 13px;
+    padding: 16px 13px;
 }
 
 .campo label {
@@ -171,10 +177,7 @@ form {
 
 button {
     margin-top: 32px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding: 15px 18px;
     border: 0;
     border-radius: 8px;
     background-color: #176d42;
@@ -199,19 +202,6 @@ button {
     color: #5b6961;
     font-size: 12px;
     line-height: 18px;
-}
-
-
-/* MENSAGENS */
-
-.mensagem {
-    margin-top: 20px;
-    padding: 12px;
-    border: 1px solid #dce3de;
-    border-radius: 8px;
-    background-color: white;
-    font-size: 14px;
-    line-height: 21px;
 }
 
 
@@ -250,13 +240,10 @@ button {
     .conteudo {
         display: block;
         width: 100%;
-        padding-top: 32px;
-        padding-bottom: 32px;
-        padding-left: 24px;
-        padding-right: 24px;
+        padding: 32px 24px;
     }
 
-   .logo-escura {
+    .logo-escura {
         margin-left: auto;
         margin-right: auto;
     }

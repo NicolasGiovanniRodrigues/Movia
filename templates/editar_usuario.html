@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar meus dados | Movia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/perfil.css') }}">
+</head>
+<body>
+    <a class="voltar" href="{{ url_for('perfil') }}">← Voltar ao perfil</a>
+    <h1>Editar meus dados</h1>
+    <p class="subtitulo">Atualize suas informações de contato.</p>
+
+    {% with mensagens = get_flashed_messages(with_categories=true) %}
+        {% for categoria, mensagem in mensagens %}
+            <p class="mensagem {{ categoria }}" role="status">{{ mensagem }}</p>
+        {% endfor %}
+    {% endwith %}
+
+    <section class="cartao">
+        <h2>{{ usuario[1] }}</h2>
+
+        <form method="post" action="{{ url_for('editar_usuario', id=usuario[0]) }}">
+            <div class="campo">
+                <label for="nome">Nome completo</label>
+                <input id="nome" name="nome" type="text" value="{{ usuario[1] }}" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input id="email" name="email" type="email" value="{{ usuario[2] }}" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefone">Telefone</label>
+                <input id="telefone" name="telefone" type="text" inputmode="numeric" pattern="[0-9]+" value="{{ usuario[3] }}" required>
+            </div>
+
+            <div class="botoes">
+                <button class="botao-verde" type="submit">Salvar alterações</button>
+                <a class="botao-branco" href="{{ url_for('perfil') }}">Cancelar</a>
+            </div>
+        </form>
+    </section>
+</body>
+</html>

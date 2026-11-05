@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #16251e;
+    background-color: #f5f7f5;
+}
+
+.pagina {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 28% 72%;
+}
+
+.marca {
+    min-height: 100vh;
+    padding: 38px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: #112c20;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 18px;
+}
+
+.logo img {
+    width: 22px;
+    height: 22px;
+}
+
+.texto-marca {
+    max-width: 380px;
+    margin: auto 0;
+}
+
+.texto-marca h1 {
+    font-size: 36px;
+    line-height: 1.12;
+    margin-bottom: 18px;
+}
+
+.texto-marca p {
+    color: #d0dad4;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.texto-marca small {
+    color: #d0dad4;
+}
+
+.marca footer {
+    color: #ced8d1;
+    font-size: 12px;
+}
+
+.conteudo {
+    padding: 48px 7%;
+}
+
+.logo-verde {
+    color: #176d42;
+    margin-bottom: 10px;
+}
+
+.voltar {
+    display: inline-block;
+    color: #69766f;
+    font-size: 13px;
+    margin-bottom: 28px;
+}
+
+.conteudo h2 {
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.descricao,
+.texto {
+    color: #607068;
+    margin-bottom: 20px;
+}
+
+.sucesso {
+    max-width: 820px;
+    padding: 16px;
+    border: 1px solid #bad8c2;
+    border-radius: 6px;
+    background-color: #e8f3eb;
+    color: #176d42;
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.botao-verde,
+.botao-branco {
+    min-height: 42px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.botao-verde {
+    color: white;
+    background-color: #176d42;
+}
+
+.botao-branco {
+    color: #176d42;
+    background-color: white;
+    border: 1px solid #dce3de;
+}
+
+.aviso {
+    margin-top: 28px;
+    color: #69766f;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    .pagina {
+        grid-template-columns: 1fr;
+    }
+
+    .marca {
+        min-height: auto;
+        padding: 22px;
+    }
+
+    .texto-marca {
+        margin: 28px 0;
+    }
+
+    .texto-marca h1 {
+        font-size: 30px;
+    }
+
+    .marca footer {
+        display: none;
+    }
+
+    .conteudo {
+        padding: 28px 22px;
+    }
+
+    .botoes {
+        flex-wrap: wrap;
+    }
+}

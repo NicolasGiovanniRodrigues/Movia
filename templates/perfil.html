@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu perfil | Movia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/perfil.css') }}">
+</head>
+<body>
+    <a class="voltar" href="{{ url_for('inicio') }}">← Voltar ao início</a>
+    <h1>Meu perfil</h1>
+    <p class="subtitulo">Mantenha seus dados e seu acesso em dia.</p>
+
+    {% with mensagens = get_flashed_messages(with_categories=true) %}
+        {% for categoria, mensagem in mensagens %}
+            <p class="mensagem {{ categoria }}" role="status">{{ mensagem }}</p>
+        {% endfor %}
+    {% endwith %}
+
+    <section class="cartao">
+        <h2>{{ usuario[0] }}</h2>
+        {% if usuario[4] == 0 %}
+            <span class="selo bloqueado">{{ usuario[3] }} · Conta bloqueada</span>
+        {% else %}
+            <span class="selo">{{ usuario[3] }} · Conta ativa</span>
+        {% endif %}
+
+        <div class="dado">
+            <span>E-mail</span>
+            <strong>{{ usuario[1] }}</strong>
+        </div>
+
+        <div class="dado">
+            <span>Telefone</span>
+            <strong>{{ usuario[2] }}</strong>
+        </div>
+
+        <div class="botoes">
+            <a class="botao-verde" href="{{ url_for('editar_usuario', id=id_usuario) }}">Editar meus dados</a>
+            <a class="botao-branco" href="{{ url_for('alterar_senha') }}">Alterar senha</a>
+        </div>
+    </section>
+</body>
+</html>
